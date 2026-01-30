@@ -1,0 +1,33 @@
+{
+    "slug": "bootstrap-exercises",
+    "title": {
+        "us": "Learn Bootstrap from Zero",
+        "es": "Tutorial para Aprender Bootstrap desde Cero"
+    },
+    "description": {
+        "us": "Master Bootstrap with practical exercises on grid systems, navigation bars, hero sections, and more. Learn to apply Bootstrap styles to your HTML elements, use popular rules and tricks, and build responsive, modern, and visually appealing websites efficiently.",
+        "es": "Domina Bootstrap con ejercicios prácticos sobre sistemas de cuadrícula, barras de navegación, secciones hero y más. Aprende a aplicar estilos de Bootstrap a tus elementos HTML, usa reglas y trucos populares, y crea sitios web responsivos, modernos y visualmente atractivos de manera eficiente."
+    },
+    "repository": "https://github.com/4GeeksAcademy/bootstrap-exercises-tutorial",
+    "duration": 5,
+    "preview": "https://github.com/4GeeksAcademy/bootstrap-exercises-tutorial/blob/master/preview.png?raw=true",
+    "difficulty": "easy",
+    "technolgies": ["bootstrap", "html", "css"],
+    "videoSolutions": false,
+    "projectType": "tutorial",
+    "autoPlay": "true",
+    "bugsLink": "https://github.com/learnpack/learnpack/issues/new",
+    "graded": true,
+    "telemetry": {
+        "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id=144"
+    },
+    "editor": {
+        "version": "5.0",
+        "agent": "vscode"
+    },
+    "video": {
+        "intro": {
+            "es": "https://www.youtube.com/watch?v=328yx6t-RTY"
+        }
+    }
+}
