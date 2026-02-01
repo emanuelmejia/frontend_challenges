@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('./styles.css'); /* Tag and Class Styles! */
+
+.loginBox {
+	background: white;
+	width: 27vw;
+	height: 80vh;
+	margin: 10vh 35vw;
+    border-radius: 20px;
+    padding: 0;
+}
+
+#loginTitle{
+    display: grid;
+    align-items: end; /* Aligns content to the bottom */
+    width: 100%;
+    height: 17%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+	font-family: "Montserrat", sans-serif;
+}
+
+#loginCredentials {
+	width: 80%;
+    margin: auto;
+}
+
+
+#forgotLabel{
+	text-align: right;
+	padding-top: 1%;
+}
+
+#loginButtonBox {
+	text-align: center;
+	padding-top: 10%;
+}
+
+#loginButton {
+	background-image: linear-gradient(to right, blue, red);
+	padding: 2%;
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-size: 1.2em;
+	font-style: normal;
+	border: none;
+	border-radius: 50px;
+	width: 90%;
+}
+
+#loginButton:hover {
+	background-image: linear-gradient(to right, red, blue);
+}
+
+#signLabel{
+	text-align: center;
+	padding-top: 4%;
+}
+
+#brandBox{
+	text-align: center;
+
+}
+
+#fButton{
+	padding: 5px 12px;
+	background-color: #001aff;
+}
+
+#fButton:hover{
+	background-color: white;
+	color: #001aff;
+	border-width: 3px;
+	border-color: #001aff;
+}
+
+#xButton{
+	padding: 5px 6px;
+	background-color: #000000;
+}
+
+#xButton:hover{
+	background-color: white;
+	color: #000000;
+	border-width: 3px;
+	border-color: #000000;
+}
+
+#gButton{
+	padding: 5px 6px;
+	background-color: #ff0000;
+}
+
+#gButton:hover{
+	background-color: white;
+	color: #ff0000;
+	border-width: 3px;
+	border-color: #ff0000;
+}
+
+#footBox{
+    display: grid;
+    align-items: end; /* Aligns content to the bottom */
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    padding-top: 30%;
+    text-align: center;
+	font-family: "Montserrat", sans-serif;
+}
+
+
+

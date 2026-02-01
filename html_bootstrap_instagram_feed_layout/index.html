@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+      integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/072e5df971.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <style>
+      .nav-item .nav-link {
+        color: rgb(117, 117, 117);
+      }
+      .nav-item .nav-link.active {
+        color: rgb(255, 255, 255);
+      }
+      .sign {
+        font-family: "Rouge Script", cursive;
+        font-weight: 400;
+        font-size: 1.5em;
+      }
+    </style>
+
+    <div class="container-fluid bg-black bg-gradient">
+      <div class="row">
+        <!-- NavBar -->
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <!-- Left side navBar -->
+              <a class="navbar-brand" href="#"
+                ><i class="fa-brands fa-instagram"></i> Instagram</a
+              >
+
+              <!-- Right side navBar -->
+              <!-- Collapse option -->
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!--  -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item mb-2 mb-lg-0">
+                    <button
+                      class="btn btn-outline-success me-3"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#postModal"
+                    >
+                      Create a new Post
+                    </button>
+                  </li>
+                  <li class="nav-item dropdown mb-2 mb-lg-0">
+                    <button
+                      class="btn btn-outline-secondary dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Accesibility</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Privacy and Data</a>
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item text-danger" href="#"
+                          >Log out</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="col-lg-12 text-light text-end">
+          <span class="pe-2 sign">Emanuel Mejía</span>
+        </div>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="postModal"
+          tabindex="-1"
+          aria-labelledby="postModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content bg-black text-light">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="postModalLabel">
+                  Create a New Post
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <h6>Caption:</h6>
+                <textarea
+                  class="form-control"
+                  placeholder="Add the caption of your post here"
+                  rows="2"
+                ></textarea>
+                <button type="button" class="col-1 btn border mt-2 btn-light">
+                  <i class="fa-solid fa-camera"></i>
+                </button>
+                <button type="button" class="col-1 btn border mt-2 btn-light">
+                  <i class="fa-solid fa-location-dot"></i>
+                </button>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-success">Publish</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- View Menu -->
+      <div class="row">
+        <ul
+          class="nav nav-pill d-flex justify-content-center"
+          id="myTab"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link active"
+              id="grid-view"
+              data-bs-toggle="tab"
+              data-bs-target="#grid"
+              type="button"
+              role="tab"
+              aria-controls="grid"
+              aria-selected="true"
+            >
+              <i class="fa-solid fa-table-cells"></i>
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link"
+              id="singular-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#singular"
+              type="button"
+              role="tab"
+              aria-controls="singular"
+              aria-selected="false"
+            >
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active overflow-hidden"
+          id="grid"
+          role="tabpanel"
+          aria-labelledby="grid-view"
+        >
+          <div class="row">
+            <div class="col-4 py-3">
+              <img
+                style="height: 30vw; object-fit: cover"
+                src="https://media.licdn.com/dms/image/v2/D5612AQEGre6xxMuXQw/article-cover_image-shrink_600_2000/B56Zj1AWXbIAAk-/0/1756457167072?e=1771459200&v=beta&t=apWoH6AzxS7S5UXt5l-g_-K3bdLD7rgb9l8NjJJDBuA"
+                class="img-fluid w-100 rounded"
+                alt=""
+              />
+            </div>
+            <div class="col-4 py-3">
+              <img
+                style="height: 30vw; object-fit: cover"
+                src="https://media.licdn.com/dms/image/v2/D4E12AQHlc41aD9I3IA/article-cover_image-shrink_600_2000/B4EZp6f6AkHgAQ-/0/1762991776590?e=1771459200&v=beta&t=u0JVzey08_66WkehU6CPN9vl-MMgWEHxCqYKJhiPRhU"
+                class="img-fluid w-100 rounded"
+                alt=""
+              />
+            </div>
+            <div class="col-4 py-3">
+              <img
+                style="height: 30vw; object-fit: cover"
+                src="https://lh3.googleusercontent.com/p/AF1QipNSBW9cHFzj_MH_HLMUncU3nUps_tBsP196b-1t=s1360-w1360-h1020-rw"
+                class="img-fluid w-100 rounded"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4 py-3">
+              <img
+                style="height: 30vw; object-fit: cover"
+                src="https://scontent.fmex1-4.fna.fbcdn.net/v/t39.30808-6/609004490_1297305295765064_1171150874586297623_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=X0pwU_psIXwQ7kNvwGr0eMi&_nc_oc=Adk2l9wRPUmIQKilEnPxoXqPq2OHNY2RY-cOCiJoTod3PfByWlZc4qmmkj3zfxkuyDo&_nc_zt=23&_nc_ht=scontent.fmex1-4.fna&_nc_gid=A05kY28wSIOGeqQuC55lHA&oh=00_AfvMEVEpUAl-hhjqujCIS6EY0aryNCzfKZJdJEY5tLrzFA&oe=698350FA"
+                class="img-fluid w-100 rounded"
+                alt=""
+              />
+            </div>
+            <div class="col-4 py-3">
+              <img
+                style="height: 30vw; object-fit: cover"
+                src="https://media.licdn.com/dms/image/v2/D4D22AQGgGCECw-LJlg/feedshare-shrink_1280/B4DZf2Y0sBHAAk-/0/1752185392926?e=1771459200&v=beta&t=kX3B5_-Bp4wSCHSTFg5nTv2dbazHEUzg642cfQqll58"
+                class="img-fluid w-100 rounded"
+                alt=""
+              />
+            </div>
+            <div class="col-4 py-3">
+              <img
+                style="height: 30vw; object-fit: cover"
+                src="https://media.licdn.com/dms/image/v2/D4E12AQGOmpMHGPLxtQ/article-cover_image-shrink_600_2000/B4EZpGlsxkHUAU-/0/1762120879890?e=1771459200&v=beta&t=WWVUfj6EH3VJ_4nPYZM2qP4GTJBWGedG1ELlN8uj-K8"
+                class="img-fluid w-100 rounded"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4 py-3">
+              <img
+                style="height: 30vw; object-fit: cover"
+                src="https://media.licdn.com/dms/image/v2/D5612AQHT7owhgxy0kg/article-cover_image-shrink_600_2000/B56ZdDmtKoHUAY-/0/1749185913629?e=1771459200&v=beta&t=TT1Ss2j7w0ksXXer178sNfSfQBCuHMUWiSTQMx7B5kc"
+                class="img-fluid w-100 rounded"
+                alt=""
+              />
+            </div>
+            <div class="col-4 py-3">
+              <img
+                style="height: 30vw; object-fit: cover"
+                src="https://lh3.googleusercontent.com/p/AF1QipOG6cXC_JeMcJJVOcdEeE58BUFekmMw_zR5vJgN=s1360-w1360-h1020-rw"
+                class="img-fluid w-100 rounded"
+                alt=""
+              />
+            </div>
+            <div class="col-4 py-3">
+              <img
+                style="height: 30vw; object-fit: cover"
+                src="https://media.licdn.com/dms/image/v2/D4E22AQHbP6YEdKoRhQ/feedshare-shrink_800/B4EZswebUeHcAg-/0/1766044842798?e=1771459200&v=beta&t=lH57mvfPFUVgC91emHu5LLTtrKnCyBwXdEpK-8_3kPg"
+                class="img-fluid w-100 rounded"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- 1 photo per row grid -->
+        <div
+          class="tab-pane fade overflow-hidden"
+          id="singular"
+          role="tabpanel"
+          aria-labelledby="singular-tab"
+        >
+          <div class="row my-4">
+            <div class="col-6 mx-auto rounded p-0">
+              <div class="card mb-5 bg-black text-light">
+                <div class="row p-2">
+                  <div class="col-9">
+                    <h3>MIPYMES Navegando en la incertidumbre</h3>
+                  </div>
+                  <div class="col-3 text-end my-auto">06/25</div>
+                </div>
+                <img
+                  src="https://media.licdn.com/dms/image/v2/D5612AQHT7owhgxy0kg/article-cover_image-shrink_600_2000/B56ZdDmtKoHUAY-/0/1749185913629?e=1771459200&v=beta&t=TT1Ss2j7w0ksXXer178sNfSfQBCuHMUWiSTQMx7B5kc"
+                  class="card-img-top w-100"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <div class="row pe-2">
+                    <div class="col-9">
+                      <p class="card-text fw-bold">245 likes</p>
+                    </div>
+                    <div class="col-3 text-end">
+                      <a class="post-save text-light" href="#"
+                        ><i class="fa-regular fa-bookmark"></i
+                      ></a>
+                    </div>
+                  </div>
+
+                  <p class="card-text">
+                    En México, las MIPYMES representan el 99.8% del total de las
+                    empresas, generan empleo para 27 millones de personas y
+                    aportan el 52% del PIB. Son indudablemente la flota que
+                    impulsa nuestra economía.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card mb-5 bg-black text-light">
+                <div class="row p-2">
+                  <div class="col-9">
+                    <h3>Top juegos VR para este 2026</h3>
+                  </div>
+                  <div class="col-3 text-end my-auto">01/26</div>
+                </div>
+                <img
+                  src="https://media.licdn.com/dms/image/v2/D5612AQEGre6xxMuXQw/article-cover_image-shrink_600_2000/B56Zj1AWXbIAAk-/0/1756457167072?e=1771459200&v=beta&t=apWoH6AzxS7S5UXt5l-g_-K3bdLD7rgb9l8NjJJDBuA"
+                  class="card-img-top w-100"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <div class="row pe-2">
+                    <div class="col-9">
+                      <p class="card-text fw-bold">1183 likes</p>
+                    </div>
+                    <div class="col-3 text-end">
+                      <a class="post-save text-light" href="#"
+                        ><i class="fa-regular fa-bookmark"></i
+                      ></a>
+                    </div>
+                  </div>
+
+                  <p class="card-text">
+                    La realidad virtual nos permite viajar a universos
+                    fascinantes abriendo la puerta a experiencias envolventes
+                    con solo ponernos unas gafas. Y lo mejor: este año el sector
+                    ha evolucionado con propuestas más diversas, pulidas y con
+                    un mayor nivel de inmersión.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card mb-5 bg-black text-light">
+                <div class="row p-2">
+                  <div class="col-9">
+                    <h3>WAKE UP!!</h3>
+                  </div>
+                  <div class="col-3 text-end my-auto">12/25</div>
+                </div>
+                <img
+                  src="https://lh3.googleusercontent.com/p/AF1QipNSBW9cHFzj_MH_HLMUncU3nUps_tBsP196b-1t=s1360-w1360-h1020-rw"
+                  class="card-img-top w-100"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <div class="row pe-2 pb-2">
+                    <div class="col-9">
+                      <p class="card-text fw-bold">583 likes</p>
+                    </div>
+                    <div class="col-3 text-end">
+                      <a class="post-save text-light" href="#"
+                        ><i class="fa-regular fa-bookmark"></i
+                      ></a>
+                    </div>
+                  </div>
+
+                  <p class="card-text">
+                    Porque el día no arranca solo… ☕️ Americano GR bien cargado
+                    🧀 Grilled cheese doradito 🥖 Pancito dulce para el antojo
+                    TODO por $129 🤯💥 Despierta rico, come mejor y rinde más.
+                  </p>
+                  <p class="card-text">
+                    📍 Tsibi Café Corre por el tuyo antes de que se acaben 👀⚡️
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"
+      integrity="sha512-HvOjJrdwNpDbkGJIG2ZNqDlVqMo77qbs4Me4cah0HoDrfhrbA+8SBlZn1KrvAQw7cILLPFJvdwIgphzQmMm+Pw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
