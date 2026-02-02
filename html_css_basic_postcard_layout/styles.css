@@ -1,0 +1,114 @@
+/* * {
+	border: 1px dashed red;
+	min-height: 10px;
+} */
+
+body {
+	background: black;
+}
+
+.postcard {
+	background: rgb(148, 209, 230);
+	width: 400px;
+	height: 300px;
+	margin: auto;
+}
+
+.postcard-header {
+	display: flex;
+	font-family: "Lavishly Yours", cursive;
+	font-weight: 400;
+}
+
+.postcard-header img {
+	width: 50px;
+	height: 50px;
+}
+
+.postcard-header h1 {
+	width: 90%;
+	padding-left: 10px;
+	margin: 0;
+	color: darkblue;
+}
+
+.postcard-body {
+	display: flex;
+}
+
+.body-left,
+.body-right {
+	padding: 10px;
+	font-family: "Rouge Script", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.body-left p:first-child {
+	margin-top: 0px;
+}
+
+input {
+	border: none;
+	border-bottom: 1px solid gray;
+	font-family: "Rouge Script", cursive;
+	font-weight: 400;
+	font-style: normal;
+	/* width: 100%; */
+}
+
+input::placeholder {
+	color: #999999;
+	opacity: 1;
+}
+
+.postcard-footer {
+	text-align: center;
+}
+
+button {
+	background-color: blue;
+	padding: 1px;
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
+button:active {
+	background-color: darkblue;
+	color: white;
+	border-color: darkblue;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: darkblue;
+}
+
+.right-d2 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.right-d1 {
+	width: 100%;
+	height: 30%;
+}
+
+.right-d2 {
+	width: 100%;
+	height: 50%;
+}
+
+.right-d3 {
+	height: 10%;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 10px;
+	font-family: "Rouge Script", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
