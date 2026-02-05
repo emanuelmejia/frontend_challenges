@@ -1,8 +1,37 @@
-window.onload = function() {
-let who = ['The dog', 'My grandma', 'The mailman', 'My bird'];
-let action = ['ate', 'peed', 'crushed', 'broke'];
-let what = ['my homework', 'my phone', 'the car'];
-let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
+window.onload = function () {
+  let who = [
+    "The dog",
+    "The mailman",
+    "My bird",
+    "Batman",
+    "Aliens",
+    "Abe Lincoln's ghost",
+  ];
+  let action = [
+    "ate",
+    "peed",
+    "crushed",
+    "broke",
+    "pulverized",
+    "blew up",
+    "hijacked",
+  ];
+  let what = [
+    "my homework",
+    "my phone",
+    "the car",
+    "my computer",
+    "my house",
+    "my grandma",
+  ];
+  let when = [
+    "before class",
+    "when I was sleeping",
+    "while I was studying",
+    "while I was exercising",
+    "during my lunch",
+    "while I was praying",
+  ];
 
   let ranWho = Math.floor(Math.random() * who.length);
   let ranAct = Math.floor(Math.random() * action.length);
@@ -10,5 +39,5 @@ let when = ['before the class', 'when I was sleeping', 'while I was exercising',
   let ranWhen = Math.floor(Math.random() * when.length);
 
   excuse = `${who[ranWho]} ${action[ranAct]}  ${what[ranWhat]} ${when[ranWhen]}`;
-  document.querySelector("#excuse").innerHTML = excuse;
-}
+  document.querySelector("#generator").innerHTML = excuse;
+};
